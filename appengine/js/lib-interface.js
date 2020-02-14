@@ -13,7 +13,7 @@
 goog.provide('BlocklyInterface');
 
 goog.require('Blockly');
-goog.require('Blockly.geras.Renderer');
+goog.require('Blockly.zelos.Renderer');
 goog.require('BlocklyGames');
 goog.require('BlocklyGames.Msg');
 goog.require('BlocklyStorage');
@@ -183,6 +183,7 @@ BlocklyInterface.injectBlockly = function(options) {
   }
   options['media'] = 'third-party/blockly/media/';
   options['oneBasedIndex'] = false;
+  options['renderer'] = 'zelos';
   BlocklyInterface.workspace = Blockly.inject('blockly', options);
   BlocklyInterface.workspace.addChangeListener(BlocklyInterface.codeChanged);
 };
